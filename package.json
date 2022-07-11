@@ -44,7 +44,8 @@
     "cypress:test": "cypress run",
     "jest": "jest",
     "changeset": "changeset",
-    "e2e:run": "npm run wait-on http://localhost:3000 && npm run cypress:test",
+    "e2e:wait": "wait-on http://localhost:3000",
+    "e2e:run": "npm run e2e:wait && npm run cypress:test",
     "test:e2e": "npm run start & npm run e2e:run"
   },
   "eslintConfig": {
