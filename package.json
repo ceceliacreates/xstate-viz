@@ -44,8 +44,8 @@
     "cypress:test": "cypress run",
     "jest": "jest",
     "changeset": "changeset",
-    "test:e2e:run": "yarn wait-on http://localhost:3000 && yarn cypress:test",
-    "test:e2e": "concurrently \"yarn start\" &\"yarn test:e2e:run\""
+    "e2e:run": "yarn wait-on http://localhost:3000 && yarn cypress:test",
+    "test:e2e": "concurrently \"yarn start\" &\"yarn e2e:run\""
   },
   "eslintConfig": {
     "extends": [
