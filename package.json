@@ -9,6 +9,7 @@
     "@emotion/styled": "^11",
     "@graphql-typed-document-node/core": "^3.1.0",
     "@monaco-editor/react": "^4.2.1",
+    "@replayio/cypress": "^0.2.3",
     "@sentry/react": "^6.10.0",
     "@sentry/tracing": "^6.10.0",
     "@supabase/supabase-js": "^1.22.5",
@@ -42,7 +43,9 @@
     "cypress:open": "cypress open",
     "cypress:test": "cypress run",
     "jest": "jest",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "test:e2e:run": "yarn wait-on http://localhost:3000 && yarn cypress:test",
+    "test:e2e": "concurrently \"yarn start\" &\"yarn test:e2e:run\""
   },
   "eslintConfig": {
     "extends": [
@@ -86,6 +89,7 @@
     "patch-package": "^6.4.7",
     "prettier": "^2.3.2",
     "sass": "^1.33.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "wait-on":"^6.0.1"
   }
 }
