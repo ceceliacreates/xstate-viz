@@ -42,6 +42,7 @@
     "postinstall": "patch-package && mkdir -p public/monaco-editor && cp -r node_modules/monaco-editor public",
     "cypress:open": "cypress open",
     "cypress:test": "cypress run",
+    "cypress:record": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) cypress run --browser 'Replay Firefox'",
     "jest": "jest",
     "changeset": "changeset",
     "e2e:wait": "wait-on http://localhost:3000",
