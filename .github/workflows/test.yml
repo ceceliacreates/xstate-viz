@@ -37,3 +37,7 @@ jobs:
           public: true
           issue-number: ${{ github.event.pull_request.number }}
           upload-all: true
+      
+      - name: Output metadata
+        run: npx @replayio/replay ls
+        shell: bash
