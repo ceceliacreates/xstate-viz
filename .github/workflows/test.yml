@@ -39,4 +39,5 @@ jobs:
           upload-all: true
       
       - run: npx @replayio/replay ls
+        if: ${{ always() }}
         shell: bash
