@@ -27,11 +27,14 @@ jobs:
 
       - name: Jest tests
         run: yarn jest --ci
+      
+      - name: Start server
+        run: npm run start
 
       - name: Run Cypress
         uses: replayio/action-cypress@v0.1.4
         with:
-          command: npm run e2e:server -- -- --
+          command: npm run cypress:test --
           browser: "Replay Firefox"
           apiKey: ${{ secrets.CYPRESS_REPLAY_API_KEY }}
           public: true
