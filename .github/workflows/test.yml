@@ -38,6 +38,6 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           upload-all: true
       
-      - run: npx @replayio/replay ls --a
+      - run: npx @replayio/replay ls --all
         if: ${{ always() }}
         shell: bash
